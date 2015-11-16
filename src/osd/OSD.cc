@@ -1027,15 +1027,15 @@ void OSDService::retrieve_epochs(epoch_t *_boot_epoch, epoch_t *_up_epoch,
 {
   Mutex::Locker l(epoch_lock);
   if (_boot_epoch) {
-    derr << "_boot_epoch = " << boot_epoch << dendl;
+    generic_derr << "_boot_epoch = " << boot_epoch << dendl;
     *_boot_epoch = boot_epoch;
   }
   if (_up_epoch) {
-    derr << "_up_epoch = " << up_epoch << dendl;
+    generic_derr << "_up_epoch = " << up_epoch << dendl;
     *_up_epoch = up_epoch;
   }
   if (_bind_epoch) {
-    derr << "_bind_epoch = " << bind_epoch << dendl;
+    generic_derr << "_bind_epoch = " << bind_epoch << dendl;
     *_bind_epoch = bind_epoch;
   }
 }
